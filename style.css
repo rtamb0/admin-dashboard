@@ -17,11 +17,11 @@ nav {
     display: grid;
     grid-template-rows: 1fr 4fr 6fr;
     padding-left: 1rem;
+    padding-top: 1rem;
 }
 
 .dashboard-logo {
     font-size: 1.5rem;
-    align-self: center;
 }
 
 nav ul {
