@@ -45,7 +45,7 @@ header {
 
 .top-part {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1.2fr;
     align-items: center;
 }
 
@@ -70,6 +70,7 @@ input {
     grid-template-columns: auto auto 4fr;
     align-items: center;
     column-gap: 1.7rem;
+    justify-self: center;
 }
 
 .user-info span {
@@ -80,6 +81,10 @@ input {
     height: 50px;
     width: 50px;
     background-color: aqua;
+}
+
+.user-info p {
+    white-space: nowrap;
 }
 
 .bottom-part {
@@ -104,6 +109,15 @@ input {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 0.5rem 1.8rem;
 }
 
 section {
