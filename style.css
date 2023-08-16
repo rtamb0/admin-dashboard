@@ -67,10 +67,14 @@ input {
 
 .user-info {
     display: grid;
-    grid-template-columns: 1fr 1fr 4fr;
-    align-items: center
+    grid-template-columns: auto auto 4fr;
+    align-items: center;
+    column-gap: 1.7rem;
 }
 
+.user-info span {
+    font-size: 1.3rem;
+}
 
 .user-info .user-icon {
     height: 50px;
