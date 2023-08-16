@@ -66,6 +66,12 @@ header {
     align-items: center;
 }
 
+.user-welcome .user-icon {
+    height: 75px;
+    width: 75px;
+    background-color: aqua;
+}
+
 section {
     background-color: rgb(211, 211, 211);
 }
