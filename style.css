@@ -8,14 +8,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 nav {
     background-color: rgb(53, 53, 177);
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1.3fr minmax(300px, 4fr) 6fr;
+    grid-template-rows: minmax(77px, 1.3fr) minmax(300px, 4fr) 6fr;
     grid-template-columns: minmax(250px, 1fr);
     padding-left: 1rem;
     padding-top: 1rem;
@@ -70,6 +70,7 @@ input {
     grid-template-columns: 1fr 1fr 4fr;
     align-items: center
 }
+
 
 .user-info .user-icon {
     height: 50px;
