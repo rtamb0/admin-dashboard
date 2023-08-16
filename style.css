@@ -40,12 +40,29 @@ header {
     background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-rows: 1.5fr 2fr;
+    padding-left: 2.5rem;
 }
 
 .top-part {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    align-items: center
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    appearance: none;
+    width: 85%;
+    height: 1.7rem;
 }
 
 .user-info {
