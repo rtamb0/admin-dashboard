@@ -88,10 +88,22 @@ input {
     align-items: center;
 }
 
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
 .user-welcome .user-icon {
     height: 75px;
     width: 75px;
     background-color: aqua;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 section {
