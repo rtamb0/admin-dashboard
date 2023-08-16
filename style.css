@@ -123,4 +123,12 @@ button {
 
 section {
     background-color: rgb(211, 211, 211);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1.5rem 1rem;
+}
+
+.project {
+    grid-row: 1 / 3;
 }
