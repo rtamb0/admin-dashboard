@@ -149,3 +149,13 @@ section {
 .project-buttons {
     justify-self: end;
 }
+
+.announcement-container {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.announcement-info {
+    width: 90%;
+    justify-self: center;
+}
