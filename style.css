@@ -78,7 +78,7 @@ input {
     font-size: 1.3rem;
 }
 
-.user-info .user-icon {
+.user-icon {
     height: 50px;
     width: 50px;
     background-color: aqua;
@@ -103,7 +103,6 @@ input {
 .user-welcome .user-icon {
     height: 75px;
     width: 75px;
-    background-color: aqua;
 }
 
 .welcome-text {
