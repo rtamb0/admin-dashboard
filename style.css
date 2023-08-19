@@ -70,7 +70,7 @@ input {
 
 .user-info {
     display: grid;
-    grid-template-columns: auto auto 4fr;
+    grid-template-columns: auto auto 1fr;
     align-items: center;
     column-gap: 1.7rem;
     justify-self: center;
@@ -159,4 +159,20 @@ section {
 .announcement-info {
     width: 90%;
     justify-self: center;
+}
+
+.trending-container {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.trending-user {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.trending-user-info p:nth-child(2) {
+    margin-top: 0.3rem;
 }
