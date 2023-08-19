@@ -22,14 +22,18 @@ nav {
     display: grid;
     position: sticky;
     top: 0;
-    grid-template-rows: 1fr 5fr 2fr;
+    grid-template-rows: 2fr 5fr 2fr;
     grid-template-columns: minmax(250px, 1fr);
     padding-left: 1rem;
-    padding-top: 1rem;
 }
 
 .dashboard-logo {
     font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: 60px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 nav ul {
