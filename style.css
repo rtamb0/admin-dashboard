@@ -179,13 +179,13 @@ section {
     row-gap: 2rem;
 }
 
-.project {
-    grid-row: 1 / 3;
-}
-
-.project h2 {
+section h2:first-child {
     font-family: var(--chakra-petch);
     color: white;
+}
+
+.project {
+    grid-row: 1 / 3;
 }
 
 .project-container {
