@@ -71,12 +71,11 @@ header {
 
 .search-bar {
     display: flex;
-    align-items: center;
     gap: 0.7rem;
 }
 
 label {
-    font-size: 1.2rem;
+    width: 30px;
 }
 
 input {
@@ -87,6 +86,11 @@ input {
     border-radius: 10px;
     padding: 0 5px;
     font-size: inherit;
+}
+
+input::placeholder {
+    font-size: 0.9rem;
+    padding-left: 0.1rem;
 }
 
 .user-info {
