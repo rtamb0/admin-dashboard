@@ -70,17 +70,19 @@ header {
 }
 
 .search-bar {
-    display: flex;
-    gap: 0.7rem;
+    display: grid;
+    column-gap: 0.7rem;
+    grid-template-columns: 30px 85%;
+    align-items: center;
 }
 
 label {
-    width: 30px;
+    display: grid;
+    align-items: center;
 }
 
 input {
     appearance: none;
-    width: 85%;
     height: 1.7rem;
     border-style: none;
     border-radius: 10px;
