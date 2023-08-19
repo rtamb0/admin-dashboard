@@ -109,6 +109,7 @@ input::placeholder {
     align-items: center;
     column-gap: 1.5rem;
     justify-self: center;
+    margin-left: 3rem;
 }
 
 .user-info img:nth-child(2) {
