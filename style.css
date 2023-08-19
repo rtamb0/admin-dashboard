@@ -127,8 +127,7 @@ input::placeholder {
     gap: 0.7rem;
 }
 
-.user-welcome .user-icon {
-    height: 75px;
+.user-welcome img {
     width: 75px;
 }
 
@@ -136,6 +135,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    color: white;
 }
 
 .header-buttons {
