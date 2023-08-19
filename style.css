@@ -96,24 +96,23 @@ input::placeholder {
 
 .user-info {
     display: grid;
-    grid-template-columns: 25px auto 1fr;
+    grid-template-columns: 25px 50px 1fr;
     align-items: center;
     column-gap: 1.7rem;
     justify-self: center;
+}
+
+.user-info img:nth-child(2) {
+    width: 50px;
 }
 
 .user-info span {
     font-size: 1.3rem;
 }
 
-.user-icon {
-    height: 50px;
-    width: 50px;
-    background-color: aqua;
-}
-
 .user-info p {
     white-space: nowrap;
+    color: white;
 }
 
 .bottom-part {
