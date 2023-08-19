@@ -22,7 +22,7 @@ nav {
     display: grid;
     position: sticky;
     top: 0;
-    grid-template-rows: minmax(77px, 1.3fr) minmax(300px, 6fr) 3fr;
+    grid-template-rows: 1fr 5fr 2fr;
     grid-template-columns: minmax(250px, 1fr);
     padding-left: 1rem;
     padding-top: 1rem;
@@ -36,8 +36,11 @@ nav ul {
     list-style-type: none;
     font-size: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 40px 1fr;
     row-gap: 1rem;
+    column-gap: 1.5rem;
+    align-items: center;
+    color: rgb(206, 204, 204);
 }
 
 header {
@@ -76,7 +79,7 @@ input {
 
 .user-info {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 25px auto 1fr;
     align-items: center;
     column-gap: 1.7rem;
     justify-self: center;
