@@ -173,7 +173,7 @@ button {
 section {
     background-color: #334155;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr minmax(220px, 1fr);
     grid-template-rows: 1fr 1fr;
     padding: 2rem 1rem;
     column-gap: 1rem;
