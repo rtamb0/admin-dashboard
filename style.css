@@ -222,7 +222,7 @@ section h2:first-child {
     display: grid;
     row-gap: 1rem;
     background-color: var(--graywhite);
-    padding: 2rem 1rem;
+    padding: 2rem;
     margin-top: 1rem;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -235,6 +235,14 @@ hr {
 .announcement-info {
     width: 95%;
     justify-self: center;
+}
+
+.announcement-info h5 {
+    font-size: 1rem;
+}
+
+.announcement-info p {
+    font-size: 0.8rem;
 }
 
 .trending-container {
