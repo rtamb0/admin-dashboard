@@ -257,6 +257,10 @@ hr {
     column-gap: 1rem;
 }
 
+.trending-user img {
+    width: 50px;
+}
+
 .trending-user-info p:nth-child(2) {
     margin-top: 0.3rem;
 }
