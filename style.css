@@ -265,7 +265,12 @@ hr {
 .trending-user img {
     width: 50px;
 }
+.trending-user-info p:nth-child(1) {
+    color: #581c87;
+    font-weight: 600;
+}
 
 .trending-user-info p:nth-child(2) {
     margin-top: 0.3rem;
+    font-size: 0.9rem;
 }
