@@ -60,9 +60,13 @@ nav li {
 }
 
 nav li:hover {
-    background-color: #334155;
+    background-color: #1d4ed8;
     margin-left: -1rem;
     padding-left: 1rem;
+}
+
+nav li:active {
+    background-color: #1d4fd8a4;
 }
 
 header {
