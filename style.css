@@ -199,7 +199,7 @@ section h2:first-child {
 
 .project-cards {
     display: grid;
-    background-color: rgb(206, 204, 204);
+    background-color: var(--graywhite);
     border-left: 10px solid #581c87;
     padding: 2rem 1rem;
     border-radius: 10px;
@@ -248,6 +248,11 @@ hr {
 .trending-container {
     display: grid;
     row-gap: 2rem;
+    margin-top: 1rem;
+    background-color: var(--graywhite);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .trending-user {
