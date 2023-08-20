@@ -228,6 +228,10 @@ section h2:first-child {
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
+hr {
+    border: 1px solid #581c87;
+}
+
 .announcement-info {
     width: 95%;
     justify-self: center;
