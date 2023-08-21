@@ -21,3 +21,7 @@ projectText.appendChild(projectRating);
 
 const projectButtons = document.querySelector('.project-buttons');
 projectCard.appendChild(projectButtons);
+
+const newButton = document.querySelector('.header-buttons button:first-child');
+
+newButton.addEventListener('click', () => console.log('test'))
