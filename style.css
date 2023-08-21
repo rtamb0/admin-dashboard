@@ -192,6 +192,10 @@ button:active {
     background-color: rgba(206, 204, 204, 0.719);
 }
 
+button:hover {
+    outline: 4px solid #581c87;;
+}
+
 section {
     background-color: #334155;
     display: grid;
