@@ -1,8 +1,3 @@
-const projectContainer = document.querySelector('.project-container');
-
-const projectCard = document.createElement('div');
-projectCard.classList.add('project-cards');
-
 const projectText = document.createElement('div');
 projectText.classList.add('project-text');
 projectCard.appendChild(projectText);
@@ -24,4 +19,12 @@ projectCard.appendChild(projectButtons);
 
 const newButton = document.querySelector('.header-buttons button:first-child');
 
-newButton.addEventListener('click', () => console.log('test'))
+newButton.addEventListener('click', () => newProjectCard())
+
+function newProjectCard() {
+    const projectContainer = document.querySelector('.project-container');
+    const recentProjectCard = document.querySelector('.project-cards');
+    const projectCard = document.createElement('div');
+    projectCard.classList.add('project-cards');
+    projectContainer.insertBefore(projectCard, recentProjectCard);
+};
