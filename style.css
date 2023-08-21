@@ -214,7 +214,7 @@ section h2:first-child {
 .project {
     grid-row: 1 / 3;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: minmax(110px, 4fr) 1fr;
     grid-template-rows: auto 1fr;
 }
 
