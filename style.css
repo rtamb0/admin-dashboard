@@ -262,15 +262,15 @@ section h2:first-child {
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
-.project-cards:nth-child(1), .project-cards:nth-child(6) {
+.project-cards.finished {
     border-left-color: green;
 }
 
-.project-cards:nth-child(2), .project-cards:nth-child(4), .project-cards:nth-child(5) {
+.project-cards.inprogress {
     border-left-color: rgb(255, 145, 0);
 }
 
-.project-cards:nth-child(3) {
+.project-cards.notstarted {
     border-left-color: red;
 }
 
