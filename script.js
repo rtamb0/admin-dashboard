@@ -38,6 +38,7 @@ function newProjectCard() {
 };
 
 function dateCheckError(datePrompt) {
+    if (datePrompt === undefined) return;
     datePrompt.split('/').forEach((num, i, arr) => {
         if (arr[1] > 12) {
             datePrompt = prompt("Wrong format! Make sure to enter the date like this DD/MM/YYYY.");
