@@ -18,13 +18,34 @@ function newProjectCard() {
 
     const projectTitle = document.createElement('h4');
     projectText.appendChild(projectTitle);
+    let title = prompt("What is the title of the game?");
+    projectTitle.textContent = `${title}`;
 
     const projectStart = document.createElement('p');
     projectText.appendChild(projectStart);
+    let projectDateStart = prompt("When did you start the game? Please make sure it is on DD/MM/YYYY format.");
+    dateCheckError(projectDateStart);
+    projectStart.innerHTML = `<strong>Started:</strong> ${projectDateStart}`;
 
     const projectFinish = document.createElement('p');
     projectText.appendChild(projectFinish);
+    let projectDateEnd = prompt("When did you finish the game? Please make sure it is on DD/MM/YYYY format.");
+    dateCheckError(projectDateEnd);
+    projectFinish.innerHTML = `<strong>Finished:</strong> ${projectDateEnd}`;
 
     const projectRating = document.createElement('p');
     projectText.appendChild(projectRating);
+};
+
+function dateCheckError(datePrompt) {
+    datePrompt.split('/').forEach((num, i, arr) => {
+        if (arr[1] > 12) {
+            datePrompt = prompt("Wrong format! Make sure to enter the date like this DD/MM/YYYY.");
+        };
+    });
+    if (datePrompt.length !== 10) {
+        while (datePrompt.length !== 10) {
+            datePrompt = prompt("Wrong format! Make sure to enter the date like this DD/MM/YYYY.");
+        };
+    };
 };
