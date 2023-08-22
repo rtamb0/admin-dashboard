@@ -1,6 +1,19 @@
 const newButton = document.querySelector('.header-buttons button:first-child');
 
-newButton.addEventListener('click', () => newProjectCard())
+newButton.addEventListener('click', () => newProjectCard());
+
+const favButtons = document.querySelectorAll('.project-buttons img:nth-child(1)');
+favButtons.forEach((favButton) => {
+    favButton.addEventListener('click', () => {
+        if (favButton.getAttribute('src')  === 'assets/star.svg') {
+            favButton.setAttribute('src', 'assets/star-outline.svg')
+        } else {
+            favButton.setAttribute('src', 'assets/star.svg')
+        };
+    });
+});
+const watchButtons = document.querySelectorAll('.project-buttons img:nth-child(2)');
+const shareButtons = document.querySelectorAll('.project-buttons img:nth-child(3)');
 
 function newProjectCard() {
     const projectContainer = document.querySelector('.project-container');
