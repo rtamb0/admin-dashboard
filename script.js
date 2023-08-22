@@ -120,12 +120,13 @@ function projectStatusClass(status, node) {
 function clickableFavButtons() {
     const favButtons = document.querySelectorAll('.project-buttons img:nth-child(1)');
     favButtons.forEach((favButton) => {
-        favButton.addEventListener('click', () => {
+        favButton.addEventListener('click', (e) => {
             if (favButton.getAttribute('src')  === 'assets/star.svg') {
                 favButton.setAttribute('src', 'assets/star-outline.svg');
             } else {
                 favButton.setAttribute('src', 'assets/star.svg');
             };
+            e.stopImmediatePropagation();
         });
     });
 };
@@ -133,12 +134,13 @@ function clickableFavButtons() {
 function clickableWatchButtons() {
     const watchButtons = document.querySelectorAll('.project-buttons img:nth-child(2)');
     watchButtons.forEach((watchButton) => {
-        watchButton.addEventListener('click', () => {
+        watchButton.addEventListener('click', (e) => {
             if (watchButton.getAttribute('src')  === 'assets/eye-circle.svg') {
                 watchButton.setAttribute('src', 'assets/eye-circle-outline.svg');
             } else {
                 watchButton.setAttribute('src', 'assets/eye-circle.svg');
             };
+            e.stopImmediatePropagation();
         });
     });
 };
@@ -146,12 +148,13 @@ function clickableWatchButtons() {
 function clickableShareButtons() {
     const shareButtons = document.querySelectorAll('.project-buttons img:nth-child(3)');
     shareButtons.forEach((shareButton) => {
-        shareButton.addEventListener('click', () => {
+        shareButton.addEventListener('click', (e) => {
             if (shareButton.getAttribute('src')  === 'assets/share.svg') {
                 shareButton.setAttribute('src', 'assets/share-outline.svg');
             } else {
                 shareButton.setAttribute('src', 'assets/share.svg');
             };
+            e.stopImmediatePropagation();
         });
     });
 };
