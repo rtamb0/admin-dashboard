@@ -2,8 +2,10 @@ clickableFavButtons();
 clickableShareButtons();
 clickableWatchButtons();
 
-const newButton = document.querySelector('.header-buttons button:first-child');
+const notificationButton = document.querySelector('.user-info img:nth-of-type(1)');
+hoverableNotification(notificationButton);
 
+const newButton = document.querySelector('.header-buttons button:first-child');
 newButton.addEventListener('click', () => {
     newProjectCard();
     clickableFavButtons();
@@ -152,4 +154,9 @@ function clickableShareButtons() {
             };
         });
     });
+};
+
+function hoverableNotification(node) {
+    node.addEventListener('mouseover', () => notificationButton.setAttribute('src', 'assets/bell-ring.svg'));
+    node.addEventListener('mouseout', () => notificationButton.setAttribute('src', 'assets/bell-ring-outline.svg'));
 };
