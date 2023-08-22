@@ -20,17 +20,23 @@ function newProjectCard() {
     projectText.appendChild(projectTitle);
     projectCardTitle(projectTitle);
 
+    let projectStatus = prompt("What is the status of the game? Type '1' for Completed, '2' for In Progress, '3' for Not Started.");
+    while (projectStatus < 1 || projectStatus > 3) {
+        projectStatus = prompt("Wrong value! Make sure to type the according values: '1' for Completed, '2' for In Progress, '3' for Not Started.");
+    };
+    projectStatusClass(projectStatus, projectCard);
+
     const projectStart = document.createElement('p');
     projectText.appendChild(projectStart);
-    projectCardStartDate(projectStart);
+    projectCardStartDate(projectStart, projectStatus);
 
     const projectFinish = document.createElement('p');
     projectText.appendChild(projectFinish);
-    projectCardEndDate(projectFinish);
+    projectCardEndDate(projectFinish, projectStatus);
 
     const projectRating = document.createElement('p');
     projectText.appendChild(projectRating);
-    projectRate(projectRating);
+    projectRate(projectRating, projectStatus);
 };
 
 function dateCheckError(datePrompt) {
@@ -38,7 +44,6 @@ function dateCheckError(datePrompt) {
     while (datePrompt.match(/^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([1][26]|[2468][048]|[3579][26])00))))$/g) === null) {
         datePrompt = prompt("Wrong format! Make sure to enter the date like this DD/MM/YYYY.");
     };
-    return datePrompt;
 };
 
 function projectCardTitle(node) {
@@ -50,24 +55,53 @@ function projectCardTitle(node) {
     node.textContent = `${title}`;
 };
 
-function projectCardStartDate(node) {
-    let date = prompt("When did you start this game? Please make sure to use DD/MM/YYYY format. If you haven't started the game, leave it blank.");
-    if (date === null) return;
-    date = dateCheckError(date);
+function projectCardStartDate(node, status) {
+    let date;
+    if (status === '3') {
+        date = "N/A";
+    } else {
+        date = prompt("When did you start this game? Please make sure to use DD/MM/YYYY format. If you haven't started the game, leave it blank.");
+        if (date === null) return;
+        dateCheckError(date);
+    };
     node.innerHTML = `<strong>Started:</strong> ${date}`;
 };
 
-function projectCardEndDate(node) {
-    let date = prompt("When did you finish this game? Please make sure to use DD/MM/YYYY format. If you haven't started the game, leave it blank.");
-    if (date === null) return;
-    date = dateCheckError(date);
+function projectCardEndDate(node, status) {
+    let date;
+    if (status !== '1') {
+        date = "N/A";
+    } else {
+        date = prompt("When did you finish this game? Please make sure to use DD/MM/YYYY format. If you haven't started the game, leave it blank.");
+        if (date === null) return;
+        dateCheckError(date);
+    };
     node.innerHTML = `<strong>Finished:</strong> ${date}`;
 };
 
-function projectRate(node) {
-    let rating = prompt("What do you rate this game as? Enter a number between 0.1 - 10.")
-    while (rating < 0.1 || rating > 10) {
-        rating = prompt("Only value between 0.1-10 are allowed!");
+function projectRate(node, status) {
+    if (status === 3) {
+        node.innerHTML = `<strong>Rating:</strong> N/A`
+    } else {
+        let rating = prompt("What do you rate this game as? Enter a number between 0.1 - 10.");
+        if (rating === null) return;
+        while (rating < 0.1 || rating > 10) {
+            rating = prompt("Only value between 0.1-10 are allowed!");
+        };
+        node.innerHTML = `<strong>Rating:</strong> ${rating}/10`;
     };
-    node.innerHTML = `<strong>Rating:</strong> ${rating}/10`;
+};
+
+function projectStatusClass(status, node) {
+    switch (status) {
+        case "1":
+            node.classList.add('finished');
+            break;
+        case "2":
+            node.classList.add('inprogress');
+            break;
+        case "3":
+            node.classList.add('notstarted');
+            break;
+    };
 };
