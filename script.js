@@ -30,6 +30,7 @@ function newProjectCard() {
 
     const projectRating = document.createElement('p');
     projectText.appendChild(projectRating);
+    projectRate(projectRating);
 };
 
 function dateCheckError(datePrompt) {
@@ -61,4 +62,12 @@ function projectCardEndDate(node) {
     if (date === null) return;
     date = dateCheckError(date);
     node.innerHTML = `<strong>Finished:</strong> ${date}`;
+};
+
+function projectRate(node) {
+    let rating = prompt("What do you rate this game as? Enter a number between 0.1 - 10.")
+    while (rating < 0.1 || rating > 10) {
+        rating = prompt("Only value between 0.1-10 are allowed!");
+    };
+    node.innerHTML = `<strong>Rating:</strong> ${rating}/10`;
 };
